@@ -1,0 +1,103 @@
+{
+  "name": "@angstvorfrauen/baileys",
+  "version": "2.0.6",
+  "description": "Websocket Whatsapp API for Node.js",
+  "keywords": [
+    "whatsapp",
+    "websocket",
+    "api",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/angstvorfrauen/Baileys",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/angstvorfrauen/Baileys.git"
+  },
+  "license": "MIT",
+  "author": "Xeuka",
+  "main": "./lib/index.js",
+  "files": [
+    "lib/*",
+    "WAProto/*"
+  ],
+  "scripts": {
+    "changelog:last": "conventional-changelog -p angular -r 2",
+    "changelog:preview": "conventional-changelog -p angular -u",
+    "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "example": "node --inspect Example/example.js",
+    "gen:protobuf": "sh WAProto/GenerateStatics.sh",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "yarn lint --fix",
+    "release": "release-it",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@cacheable/node-cache": "*",
+    "@hapi/boom": "*",
+    "@whiskeysockets/eslint-config": "github:whiskeysockets/eslint-config",
+    "async-mutex": "*",
+    "axios": "*",
+    "cache-manager": "*",
+    "figlet": "*",
+    "fs": "*",
+    "gradient-string": "2.0.2",
+    "jimp": "*",
+    "libsignal-xeuka": "*",
+    "lodash": "*",
+    "moment-timezone": "*",
+    "music-metadata": "*",
+    "os": "*",
+    "path": "*",
+    "pbjs": "^0.0.14",
+    "pino": "*",
+    "protobufjs": "*",
+    "readline": "*",
+    "ws": "*"
+  },
+  "devDependencies": {
+    "@types/jest": "*",
+    "@types/node": "*",
+    "@types/ws": "*",
+    "cache-manager": "*",
+    "conventional-changelog-cli": "*",
+    "eslint": "*",
+    "jest": "*",
+    "jimp": "*",
+    "json": "*",
+    "link-preview-js": "*",
+    "open": "*",
+    "protobufjs-cli": "*",
+    "release-it": "*",
+    "sharp": "*"
+  },
+  "peerDependencies": {
+    "audio-decode": "*",
+    "jimp": "*",
+    "link-preview-js": "*",
+    "sharp": "*"
+  },
+  "peerDependenciesMeta": {
+    "audio-decode": {
+      "optional": true
+    },
+    "jimp": {
+      "optional": true
+    },
+    "link-preview-js": {
+      "optional": true
+    },
+    "sharp": {
+      "optional": true
+    }
+  },
+  "packageManager": "yarn@1.22.19",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "bugs": {
+    "url": "https://github.com/angstvorfrauen/Baileys/issues"
+  }
+}
