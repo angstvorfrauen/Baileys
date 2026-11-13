@@ -1,0 +1,3 @@
+npx pbjs -t static-module --no-beautify -w es6 --no-bundle --no-delimited --no-verify --no-comments -o ./index.js ./WAProto.proto
+npx pbjs -t static-module --no-beautify -w es6 --no-bundle --no-delimited --no-verify ./WAProto.proto | npx pbts --no-comments -o ./index.d.ts -
+node ./fix.js
