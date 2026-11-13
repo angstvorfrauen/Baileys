@@ -21,7 +21,6 @@ A Baileys fork for connecting a Node.js app to WhatsApp as a linked device. This
 ## Changelog
 
 - **Safari and pairing** · Uses the iOS/Safari device profile by default and accepts custom eight-character pairing codes.
-- **Buttons and interactive messages** · Adds the WhatsApp message metadata for buttons, lists, and Native Flow messages. RocketClient's `.menu` sends a Ping quick reply and a Telegram URL button.
 - **Community management** · Adds `unlinkCommunityGroup(communityJid, groupJid)` and exposes linked-group lookup.
 - **Call offers** · Adds `offerCall(jid, isVideo)` for audio and video call signaling.
 - **Jimp** · Uses Jimp `0.16.1` for image thumbnails and profile pictures, including group pictures.
@@ -31,21 +30,12 @@ A Baileys fork for connecting a Node.js app to WhatsApp as a linked device. This
 
 ## Installation
 
-### Patched build
-
-Install the local archive to use the features documented below. From the bot folder, you can build the archive from the patched package already installed in `node_modules`.
-
-```powershell
-New-Item -ItemType Directory -Path .\vendor -Force | Out-Null
-npm pack ./node_modules/@angstvorfrauen/baileys --ignore-scripts --pack-destination ./vendor
+```bash
+npm install @angstvorfrauen/baileys
 ```
 
 ```bash
-npm install ./vendor/angstvorfrauen-baileys-3.0.4.tgz
-```
-
-```bash
-yarn add file:./vendor/angstvorfrauen-baileys-3.0.4.tgz
+yarn add @angstvorfrauen/baileys
 ```
 
 To pin the patched build in `package.json`, keep the archive in the project's `vendor` folder.
@@ -53,21 +43,9 @@ To pin the patched build in `package.json`, keep the archive in the project's `v
 ```json
 {
   "dependencies": {
-    "@angstvorfrauen/baileys": "file:vendor/angstvorfrauen-baileys-3.0.4.tgz"
+    "@angstvorfrauen/baileys": "*"
   }
 }
-```
-
-### Published npm package
-
-The registry commands install the published package. Check its version and release notes for the APIs included in that release. [npm package](https://www.npmjs.com/package/@angstvorfrauen/baileys?activeTab=versions)
-
-```bash
-npm install @angstvorfrauen/baileys
-```
-
-```bash
-yarn add @angstvorfrauen/baileys
 ```
 
 ## Import
